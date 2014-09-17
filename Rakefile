@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-CandcSearch::Application.load_tasks
+BiscuitRecruitment::Application.load_tasks

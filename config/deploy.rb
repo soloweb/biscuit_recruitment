@@ -1,8 +1,8 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'candc_search'
-set :repo_url, 'git@github.com:soloweb/candc_search.git'
+set :application, 'biscuit_recruitment'
+set :repo_url, 'git@github.com:soloweb/biscuit_recruitment.git'
 
 set :deploy_user, 'deploy'
 

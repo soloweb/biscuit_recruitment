@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
-CandcSearch::Application.initialize!
+BiscuitRecruitment::Application.initialize!
