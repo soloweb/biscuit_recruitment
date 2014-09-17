@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: candc_search_development
+  database: biscuit_recruitment_development
   pool: 5
   username: soloweb
   password: solo2014
@@ -46,7 +46,7 @@ development:
 test: &test
   adapter: postgresql
   encoding: unicode
-  database: candc_search_test
+  database: biscuit_recruitment_test
   pool: 5
   username: soloweb
   password: solo2014
@@ -54,7 +54,7 @@ test: &test
 production:
   adapter: postgresql
   encoding: unicode
-  database: candc_search_production
+  database: biscuit_recruitment_production
   pool: 5
   username: soloweb
   password: solo2014
