@@ -1,10 +1,32 @@
 body {
   font-family: $font2;
+  background: $medium-grey;
+  color: $black;
 }
 
 .wrapper {
   margin: 0 auto;
   width: $wrapper-width;
+}
+h1, h2, h3, h4, h5 {
+  font-family: $font1;
+  font-weight: $light;
+  margin: 0;
+}
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+}
+h1 { font-size: 38px; }
+h2 {
+  font-size: 34px;
+  font-weight: $bold;
+}
+h3 { font-size: 30px; }
+h4 { font-size: 26px; }
+h5 { font-size: 24px; }
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 header {
@@ -12,8 +34,214 @@ header {
   background: $black;
   color: $white;
 }
-
+header .menu-toggle {
+  float: right;
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: $light;
+  text-transform: uppercase;
+  span {
+    color: $yellow;
+    font-size: 18px;
+    margin: -2px 0 0 10px;
+    float: right;
+  }
+}
 .header-image {
   width: $header-image-width;
   margin: 0 auto;
+  height: 565px;
+  margin-bottom: -235px;
+  background: url('homepage-bg.png');
+}
+.homepage .col1 { @include gs-span(d, 1, 7); }
+.homepage .col2 { @include gs-span(d, 8, 12); }
+.homepage .col2 h2 { margin: 45px 0 35px 0; }
+.homepage .block {
+  @include gs-span(d, all);
+  height: 387px;
+  background: $dark-grey;
+  margin-top: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-size: cover !important;
+}
+.homepage .block h3 {
+  color: white;
+  margin-top: 140px;
+}
+.homepage .block p {
+  float: left;
+  @include gs-span(d, 1, 8);
+  font-size: 22px;
+}
+.homepage .title-block {
+  @include gs-span(d, all);
+  background: $black;
+  color: $yellow;
+  height: 213px;
+  opacity: 0.6;
+  padding: 40px 100px;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+}
+.homepage .search {
+  border: 8px solid $light-grey;
+  background: $white;
+  padding: 30px 20px;
+}
+.homepage .search h3 {
+  margin: 0 0 20px 0;
+}
+.latest-jobs .job {
+  background: $white;
+  box-sizing: border-box;
+  height: 325px;
+  margin: 20px 0 0 0;
+  padding: 25px;
+  position: relative;
+}
+.latest-jobs .job h4 {
+  margin: 0 0 10px 0;
+}
+.latest-jobs .job h5 {
+  margin: 20px 0 0 0;
+}
+.latest-jobs .job p {
+  margin: 0;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.arrow-btn {
+  background: $medium-dark-grey;
+  padding: 20px 15px;
+  text-align: center;
+  height: 120px;
+  width: 120px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: uppercase;
+  .arrow {
+    font-size: 20px;
+    border: 2px solid $black;
+    height: 45px;
+    width: 45px;
+    margin: 10px 0 0 18px;
+    padding-top: 9px;
+    box-sizing: border-box;
+    float: left;
+    clear: left;
+    border-radius: 500px;
+  }
+}
+.latest-jobs .job .arrow-btn {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+form {
+  font-weight: $light;
+  label {
+    float: left;
+    clear: both;
+  }
+  select {
+    background: $dark-grey;
+    border: 0;
+    color: $yellow;
+    height: 45px;
+    margin: 0 0 20px 0;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .radio-buttons {
+    margin: 10px 0 30px 0;
+    float: left;
+    clear: left;
+  }
+  input[type='radio'] {
+    margin-left: 90px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  input[type='submit'] {
+    background: $black;
+    color: $white;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: $light;
+  }
+}
+
+footer {
+  @include gs-span(d, all);
+  background: $black;
+  color: $grey-text;
+  margin: 50px 0 0 0;
+  padding: 40px 0 30px 0;
+  font-weight: $light;
+}
+footer .col {
+  @include gs-span(d, 1, 3);
+  @include gs-float(d, left);
+  margin-right: 14%;
+  box-sizing: border-box;
+  &:last-child {
+    margin-right: 0;
+    width: 25%;
+  }
+  p {
+    @include gs-span(d, 1, 8);
+    @include gs-float(d, left);
+  }
+}
+footer .col h3{
+  color: $white;
+}
+footer .contact span {
+  color: $yellow;
+  margin: 0 15px 0 0;
+  font-size: 18px;
+}
+footer .social li {
+  float: left;
+  clear: left;
+  margin-bottom: 5px;
+}
+footer .social span {
+  margin: -4px 15px 0 0;
+  font-size: 20px;
+  float: left;
+}
+footer .new_newsletter_subscriber {
+  input[type='text'] {
+    border: 3px solid #505050;
+    background: none;
+    padding: 10px;
+    float: left;
+    text-transform: uppercase;
+    width: 210px;
+  }
+  input[type='submit'] {
+    color: $yellow;
+    border: 3px solid #505050;
+    border-left: 0;
+    float: left;
+    width: 45px;
+    height: 44px;
+    padding: 10px 0;
+  }
+}
+footer .copyright {
+  color: $white;
+  float: left;
+  font-size: 12px;
+  margin: 25px 0 0 0;
+}
+footer .soloweb-logo {
+  float: right;
+  margin: 25px 0 0 0;
 }

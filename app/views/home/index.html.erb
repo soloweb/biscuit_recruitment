@@ -4,21 +4,77 @@ meta :description => ""
 <div class="header-image">
   
 </div>
-<div class="wrapper">
-  <div class="home-col1">
-    
+<div class="wrapper homepage">
+  <div class="col1">
+    <div class="title-block">
+      Biscuit Recruitment
+      London
+      the 'can do' agency partner
+    </div>
+
+    <div class="block" style="background: url('assets/floor.png');">
+      <p>
+        Biscuit Recruitment specialises in 
+        support staff recruitment for a diverse range of businesses from to small start-ups to global companies.
+        With an exceptional delivery record and robust recruitment process, 
+        Biscuit aims to complete every assignment successfully with care, dedication and passion.
+      </p>
+    </div>
+
+    <div class="block" style="background: url('assets/steps.png');">
+      <h3>CANDIDATES</h3>
+    </div>
+
+    <div class="block" style="background: url('assets/sky.png');">
+      <h3>Clients</h3>
+    </div>
+
+    <div class="block" style="background: url('assets/buildings.png');">
+      <h3>Join Us</h3>
+    </div>
   </div>
-  <div class="home-col2 sidebar">
+  <div class="col2 sidebar">
     <div class="search">
-      <h2>Search</h2>
+      <h3>Search</h3>
       <form action="" class='vacancy_search'>
+        <label for="category">Job Category</label>
         <select name="category" id="category">
           <option value="">Construction</option>
           <option value="">Education</option>
         </select>
-        <input type="checkbox" name="vacancy_type" value="Perm" >
-        <input type="checkbox" name="vacancy_type" value="Temp">
+        <label for="category">Vacancy Type</label>
+        <div class="radio-buttons">
+          <input type="radio" name="vacancy_type" value="Perm" >
+          Perm
+          <input type="radio" name="vacancy_type" value="Temp">
+          Temp
+          <input type="radio" name="vacancy_type" value="Contract">
+          Contract
+        </div>
+
+        <input type='submit' value="Search Jobs">
       </form>
+    </div>
+    <h2>Latest Jobs</h2>
+    <div class="latest-jobs">
+      <% 4.times do %>
+        <div class="job">
+          <h4>Asset Manager</h4>
+
+          <h5>Duration</h5>
+          <p>Permanent</p>
+
+          <h5>Location</h5>
+          <p>London</p>
+
+          <h5>Salary</h5>
+          <p>£50000 - 55000</p>
+          <div class="arrow-btn">
+            More Info
+            <span class='ss-icon ss-gizmo arrow'>&#x27A1;</span>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
