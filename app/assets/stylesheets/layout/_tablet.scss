@@ -1,0 +1,150 @@
+@media only screen and (min-width:768px) and (max-width:1140px) {
+
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  header {
+    .top-menu {
+      float: right;
+    }
+    .logo {
+      margin-left: 20px;
+    }
+    .main-navigation {
+      display: block !important;
+      margin-right: 10px;
+      ul {
+        padding: 0;
+        li:first-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .homepage-header {
+    .header-text {
+      h1 { font-size: 36px; }
+      h2 { font-size: 26px; }
+    }
+    .search {
+      form {
+        margin-left: 2%;
+      }
+    }  
+  }
+
+  .field-bg {
+    height: 285px;
+    background-size: cover;
+    background-position-y: -120px;
+  }
+  .impossible-bg { background-size: 100% 100%; }
+
+  .search {
+    h3 {
+      margin-left: 10px;
+    }
+    form {
+      margin-left: 10px;
+      input[type='text'] {
+        padding: 15px 0 15px 10px;
+      }
+      input[type='submit'] {
+        padding: 15px 20px;
+      }
+    }
+  }
+  form.new_vacancy_application {
+    input[type='text'] {
+      width: 70%;
+    }
+  }
+  .page {
+    .content {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .sidebar {
+      .joblisting {
+        margin-top: 20px !important;
+        width: 49%;
+        margin-right: 2%;
+        &:nth-child(2n) { margin-right: 0; }
+        &:last-child { height: 357px; }
+      }
+    }
+  }
+  form.new_enquiry {
+    input[type='submit'] {
+      width: 108%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      text-align: center;
+    }
+  }
+  .contact-page {
+    width: 95%;
+    .contact-info {
+      margin-top: 95px;
+    }
+  }
+  .vacancies-page {
+    .sidebar {
+      margin-left: 2.5%;
+    }
+  }
+  .sidebar {
+    .sidebar-search {
+      float: left;
+    }
+    .joblisting {
+      height: 357px;
+      &:last-child { height: 358px; }
+    }
+  }
+  footer {
+    section {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .sub-footer {
+      .copyright {
+        margin-left: 20px;
+      }
+      .soloweb-logo {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1140px) and (orientation:portrait) {
+  .homepage .sidebar {
+    clear: left;
+    float: left;
+    margin: 0;
+    width: 100%;
+  }
+  .homepage .home-col-2 {
+    width: 50%;
+  }
+  .ladder-bg { background-size: cover; }
+  .field-bg { background-position-y: 0; }
+  .jigsaw-bg {
+    position: relative;
+    width: 200%;
+    background-size: 100% 100%;
+    .box-arrow { display: none; }
+  }
+  .homepage .joblistings .joblisting {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+    margin-top: 2%;
+    &:nth-child(2n) { margin-right: 0; }
+    &:last-child { height: 357px; }
+  }
+}

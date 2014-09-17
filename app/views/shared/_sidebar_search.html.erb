@@ -1,0 +1,18 @@
+<%
+  if session[:search_params].present?
+    keywords = session[:search_params][:keywords] if session[:search_params][:keywords].present?
+    location = session[:search_params][:location] if session[:search_params][:location].present?
+    salary = session[:search_params][:salary] if session[:search_params][:salary].present?
+    type = session[:search_params][:type] if session[:search_params][:type].present?
+  end
+%>
+
+<div class="sidebar-search box-lightgray">
+  <h3>Vacancy search</h3>
+  <%= form_tag vacancies_path, :method => :get, id: 'frmjobsearch', name: 'frmjobsearch', class: 't-all m-all' do %>
+    <%= text_field_tag :location, location, placeholder: 'Location', id: 'location' %>
+    <%= text_field_tag :keywords, keywords, placeholder: 'Keywords', name: 'keywords', id: 'keywords' %>
+    <%= text_field_tag :salary, salary, placeholder: 'Salary', id: 'salary' %>
+    <%= submit_tag "Search", :name => nil, id: 'search' %>
+  <% end %>
+</div>

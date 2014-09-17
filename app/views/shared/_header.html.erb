@@ -1,0 +1,29 @@
+<header class="d-all t-all m-all">
+  <div class="wrapper">
+    <%= link_to '/' do %>
+      <%= image_tag 'logo.png', class: 'logo' %>
+    <% end %>
+    <div class="top-menu m3-m4">
+      <div class="social-icons ss-icon ss-social-regular">
+        <%= link_to 'facebook', 'https://www.facebook.com/candcsearch', :target => '_blank' %>
+        <%= link_to 'twitter', 'https://twitter.com/CandCSearch', :target => '_blank' %>
+      </div>
+      <div class="mobile-nav-button ss-icon ss-standard">
+        <%= link_to 'rows', '#' %>
+      </div>
+      <div class="contact-info">
+        <ul>
+          <li>Call us on: 0203 475 3885</li>
+          <li>Email us at: <a href="mailto:info@candcsearch.co.uk">info@candcsearch.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class='main-navigation'>
+      <ul>
+        <% MenuItem.where(menu: 'top').order(:position).each do |menu_item| %>
+          <li><%= link_to menu_item.name, menu_item.link.present? ? menu_item.link : page_path(menu_item.page.slug) %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

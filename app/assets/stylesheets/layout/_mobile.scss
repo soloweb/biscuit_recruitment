@@ -1,0 +1,211 @@
+@media only screen and (min-width:320px) and (max-width: 767px){
+
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .impossible-slider-bg { background-size: 100% 100%; height: 200px; }
+  .jigsaw-slider-bg { background-position: left; }
+  .telescope-slider-bg { 
+    background-image: image-url('homepage-header.jpeg') no-repeat;
+    background-position-x: -650px;
+    background-position-y: 0%;
+    background-position: right -160px top;
+  }
+  .ladder-slider-bg {
+    background-position-x: -650px;
+    background-position-y: 0%;
+  }
+  .homepage {
+    .field-bg {
+      background: image-url('field-slider-bg.jpeg') no-repeat;
+      background-position-x: 50%;
+      background-position-y: -50px;
+    }
+    .jigsaw-bg {
+      height: 198px;
+      background-position: center;
+    }
+    .ladder-bg {
+      background-position: center 0px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+      .box-arrow {
+        display: none;
+      }
+    }
+    .impossible-bg { 
+      background-position-y: -180px;
+      height: 393px;
+    }
+  }
+  header {
+    padding-bottom: 0;
+    .top-menu {
+      float: none;
+    }
+    .mobile-nav-button {
+      display: block;
+      float: right;
+      margin-right: 40px;
+      margin-top: 20px;
+      font-size: 20px;
+      a {
+        color: $grayfont;
+        text-decoration: none;
+      }
+    }
+    .social-icons {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .contact-info {
+      display: none;
+      li {
+        margin: 0 !important;
+      }
+    }
+    .logo {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    .main-navigation {
+      display: none;
+      background: white;
+      width: 100%;
+      color: $black;
+      ul {
+        padding: 0;
+        margin: 0 !important;
+        li {
+          float: left;
+          clear: left;
+          margin: 10px 0 10px 20px !important;
+          font-weight: 600;
+          a {
+            color: $black !important;
+          }
+        }
+      }
+    }
+  }
+  .header-image {
+    .header-text {
+      h1 {
+        font-size: 36px;
+      }
+      h2 { 
+        font-size: 24px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .page {
+    .content {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .download-bg {
+      margin-top: 20px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .joblisting {
+      width: 95%;
+    }
+    .job-details {
+      padding: 20px 0;
+      .details {
+        margin-left: 20px;
+      }
+    }
+  }
+  .homepage-header {
+    max-height: none;
+    background-size: auto 100%;
+    .search {
+      margin-top: 0;
+      form {
+        width: 90%;
+        margin: 0 5% 0 3%;
+        float: left;
+        input {
+          margin: 10px 0 0 0 !important;
+          padding: 10px 0 10px 10px;
+          float: left;
+        }
+        input[type='submit'] {
+          width: 103%;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+      }
+    }
+  }
+  form.contact-form {
+    width: 90% !important;
+  }
+  .sidebar {
+    .sidebar-search {
+      float: left;
+      margin-top: 20px;
+    }
+    .joblistings {
+      display: none;
+    }
+  }
+  form.new_vacancy_application {
+    input[type='text'] {
+      float: left;
+      width: 85% !important;
+    }
+    input[type='file'] {
+      width: 80% !important;
+    }
+    input[type='submit'] {
+      padding: 15px 0 !important;
+      width: 90%;
+    }
+  }
+  form.new_enquiry {
+    input, textarea {
+      width: 90% !important;
+    }
+    input[type='submit'] {
+      width: 95% !important;
+      padding: 15px 40px !important;
+    }
+  }
+  footer {
+    section {
+      padding-left: 20px;
+      margin-bottom: 30px;
+      float: left;
+    }
+    .sub-footer {
+      .copyright {
+        margin-left: 20px;
+      }
+      .soloweb-logo {
+        margin-right: 20px;
+      }
+    }
+  }
+  .contact-page {
+    .contact-info {
+      margin: 0;
+    }
+    .content {
+      margin: 0 4%;
+      width: 95%;
+    }
+  }
+}
+@media only screen and (max-width:320px) {
+  footer #newsletter_subscriber_email {
+    width: 65% !important;
+  }
+}

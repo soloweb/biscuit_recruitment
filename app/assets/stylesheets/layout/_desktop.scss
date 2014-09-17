@@ -1,0 +1,23 @@
+@media only screen and (min-width:1140px) {
+  .main-navigation {
+    display: block !important;
+  }
+  .field-bg {
+    background-size: 100% 100%;
+  }
+  form {
+    input[type='text'] {
+      width: 255px;
+      padding: 15px 0 15px 20px;
+    }
+  }
+  form.new_vacancy_application {
+    width: 500px;
+    input[type='text'] {
+      width: 100%;
+    }
+  }
+  p.rate-of-pay {
+    max-width: 63%;
+  }
+}

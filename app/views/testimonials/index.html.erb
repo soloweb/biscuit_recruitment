@@ -1,0 +1,35 @@
+
+    <div class="d1-d4 t-all m-all basecontainer">
+      <div class="standardpage">
+        <div class="arrowcenter baseline">
+          <h2>Testimonials</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="d-all t-all m-all content">
+  <div class="testimonialscontent">
+    <div class="wrapper">
+      <%= render 'shared/vacancy_search' %>
+      <div class="d5-d12 t-all m-all container">
+        <% @testimonials.each do |testimonial| %>
+          <div class="jobinfo d-all t-all m-all">
+            <div class="text">
+                <%= raw(testimonial.content.sub('<p>', "<p><span class='ss-icon ss-gizmo quotes quote-first'>quote</span>")) %>
+                <span class="ss-icon ss-gizmo quotes quote-last">unquote</span>
+              <div class="quotedetails">
+                <p class="ss-icon ss-gizmo chaticon">chat</p>
+                <div class="left">
+                  <p class="role"><%= testimonial.author %></p>
+                  <p class="company"><%= testimonial.company %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <div class="basespacing">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+</div>

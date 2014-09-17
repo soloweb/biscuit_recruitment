@@ -1,0 +1,66 @@
+<%
+meta :description => "Our services cover Permanent, Contract and Interim opportunities from Junior Buyer to Procurement Director Level and everything in between."
+%>
+<div class="header-image homepage-header d-all t-all m-all">
+  <div class="wrapper">
+    <div class="header-text">
+      <h1>Welcome to C&amp;C Search</h1>
+      <h2>The Competitive Advantage</h2>
+    </div>
+    <div class="search t-all d-all m-all">
+      <h3>Find a job</h3>
+      <%= form_tag vacancies_path, :method => :get, id: 'frmSearch1', name: 'frmSearch1', class: 'm-all' do %>
+        <%= text_field_tag :location, params[:location], placeholder: 'Location', name: 'location', id: 'location', class: 't1-t2 m-all' %>
+        <%= text_field_tag :keywords, params[:keywords], placeholder: 'Keywords', name: 'keywords', id: 'keywords', class: 't3-t4 m-all' %>
+
+        <%= text_field_tag :salary, params[:salary], placeholder: 'Salary', class: 't5-t6 m-all' %>
+        <%= submit_tag "Search", :name => nil, class: 'm-all' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="content homepage t-all m-all">
+  <div class="wrapper">
+    <div class="d1-d6 t1-t4 home-col-1">
+      <div class="impossible-bg box-large">
+        <section class="bottom-right">
+          <h3><%= link_to 'Candidates', page_path('candidates') %></h3>
+          <p>Why you are in safe hands!</p>
+        </section>
+      </div>
+
+      <div class="d1-d3 box-small field-bg">
+        <div class="overlay">
+          <h3><%= link_to 'Work for us', page_path('work-for-us') %></h3>
+          <p>Why join C&amp;C Search</p>
+        </div>
+      </div>
+
+      <div class="d4-d6 box-small black-bg">
+        <h3><%= link_to 'Clients', page_path('clients') %></h3>
+        <p>Why do you want to work with us?</p>
+      </div>
+
+      <div class="d-all t-all m-all jigsaw-bg box-small">
+        <div class="box-arrow box-arrow-white"></div>
+      </div>
+    </div>
+    
+    <div class="d7-d9 t5-t6 m-all home-col-2">
+      <%= render 'shared/download_box' %>
+      <div class="box-large ladder-bg m-all">
+        <div class="box-arrow box-arrow-black"></div>
+      </div>
+
+      <div class="box-small">
+        <h3><%= link_to 'Founders', page_path('the-founders') %></h3>
+        <p>Who are we?</p>
+      </div>
+    </div>
+    
+    <div class="d10-d12 t7-t8 sidebar">
+      <%= render 'shared/job_listings' %>
+    </div>
+
+  </div>
+</div>

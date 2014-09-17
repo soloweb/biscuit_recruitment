@@ -1,0 +1,38 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+
+ *
+ *= require_self
+ */
+
+// gridset
+@import "gridset/gridset";
+
+// Base
+@import "base/normalize";
+@import 'base/site_settings';
+@import "base/base";
+
+// Layout
+@import "layout/general";
+@import "layout/mobile";
+@import "layout/tablet";
+@import "layout/desktop";
+
+// fonts
+@import "fonts/ss-social-regular";
+@import "fonts/ss-standard";
+@import "fonts/ss-gizmo";
+
+// modules
+@import "modules/forms";
+@import "modules/vacancies";
+@import "modules/carousel";
+@import "modules/alertify";

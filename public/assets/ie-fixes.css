@@ -1,0 +1,4 @@
+.homepage-header .search input[type='text'] {
+  border: solid white;
+  border-width: 15px 0 15px 20px;
+}

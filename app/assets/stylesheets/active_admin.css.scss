@@ -1,0 +1,62 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+//= require activeadmin-sortable
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+li.ckeditor label {
+  float: left;
+}
+.cke_1 {
+  float: left;
+  width: 70% !important;
+  margin-bottom: 25px !important;
+  margin-right: 100px !important;
+}
+.custom_action_button {
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.0em;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 12px;
+  margin-right: 10px !important;
+  padding: 7px 16px 6px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  background: white;
+  background: -webkit-linear-gradient(-90deg, white, #e7e7e7);
+  background: -moz-linear-gradient(-90deg, white, #e7e7e7);
+  background: linear, -90deg, white, #e7e7e7;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE7E7E7');
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE7E7E7');
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 0 rgba(255, 255, 255, 0.8) inset;
+  border: solid 1px #c7c7c7;
+  border-color: #c7c7c7;
+  border-top-color: lightgrey;
+  border-right-color: #c7c7c7;
+  border-bottom-color: #c2c2c2;
+  border-left-color: #c7c7c7;
+  text-shadow: white 0 1px 0;
+  color: #5e6469 !important;
+  padding: 12px 17px 10px;
+  margin: 0px;
+  text-decoration: none !important;
+}
+
+.custom_action_button:hover {
+    background: -webkit-linear-gradient(-90deg, white, #f1f1f1);
+  }
