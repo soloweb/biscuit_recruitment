@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918142000) do
+ActiveRecord::Schema.define(version: 20140918144310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -148,7 +148,8 @@ ActiveRecord::Schema.define(version: 20140918142000) do
     t.float    "longitude"
     t.string   "vacancy_type"
     t.string   "salary_information"
-    t.boolean  "published",          default: true
+    t.boolean  "published",           default: true
+    t.integer  "vacancy_category_id"
   end
 
   create_table "vacancy_applications", force: true do |t|

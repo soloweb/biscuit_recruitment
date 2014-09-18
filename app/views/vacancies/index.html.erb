@@ -1,3 +1,9 @@
-<% @vacancies.each do |vacancy| %>
-  <%= vacancy.title %>
-<% end %>
+<div class="wrapper">
+  <% if @vacancies.count > 0 %>
+    <% @vacancies.each do |vacancy| %>
+      <%= vacancy.title %>
+    <% end %>
+  <% else %>
+    <p>No vacancies found.</p>
+  <% end %>
+</div>

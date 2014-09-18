@@ -3,7 +3,8 @@ class Vacancy < ActiveRecord::Base
   pg_search_scope :search_full_text, :against => [:title, :description, :company]
 
   has_many :vacancy_applications
-	validates_presence_of :title, :salary_information, :description, :location
+  belongs_to :vacancy_category
+	validates_presence_of :title, :salary_information, :description, :location, :vacancy_category
 
   VACANCY_TYPES = %w[Permanent Temporary Contract]
   validates_inclusion_of :vacancy_type, in: VACANCY_TYPES
@@ -21,6 +22,7 @@ class Vacancy < ActiveRecord::Base
     form do |f|
       f.inputs do
         f.input :published, as: :select, collection: [['Published', true], ['Unpublished', false]], include_blank: false
+        f.input :vacancy_category, as: :select, collection: VacancyCategory.all, include_blank: false
         f.input :title,  :type => :string
         f.input :company,  :type => :string
         f.input :vacancy_type, as: :select, collection: VACANCY_TYPES, include_blank: false
