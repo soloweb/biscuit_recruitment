@@ -11,6 +11,6 @@ class Vacancy < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode, if: :location_changed?
 
-  default_scope order('created_at DESC')
+  default_scope { order('created_at DESC') }
   scope :published, -> { where(published: true) }
 end
