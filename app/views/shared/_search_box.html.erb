@@ -1,20 +1,17 @@
 <div class="search">
   <h3>Search</h3>
-  <form action="" class='vacancy_search'>
+  <form action="/vacancies" class='vacancy_search'>
     <label for="category">Job Category</label>
     <div class="styled-select">
-      <select name="category" id="category">
-        <option value="">Construction</option>
-        <option value="">Education</option>
-      </select>
+      <%= select_tag "category", options_from_collection_for_select(VacancyCategory.all, "id", "name") %>
     </div>
     <label for="category">Vacancy Type</label>
     <div class="radio-buttons">
-      <input type="radio" name="vacancy_type" value="Perm" >
+      <input type="radio" name="vacancy_type" value="permanent" checked="true" >
       Perm
-      <input type="radio" name="vacancy_type" value="Temp">
+      <input type="radio" name="vacancy_type" value="temporary">
       Temp
-      <input type="radio" name="vacancy_type" value="Contract">
+      <input type="radio" name="vacancy_type" value="contract">
       Contract
     </div>
 
