@@ -212,15 +212,24 @@ form {
   label {
     float: left;
     clear: both;
+    text-transform: uppercase;
   }
-  select {
-    background: $dark-grey;
+  .styled-select {
+    height: 45px;
+    margin: 10px 0 20px 0;
+    float: left;
+    clear: left;
+    width: 100%;
+    background: url('expand.png') no-repeat $dark-grey 97% center;
+  }
+  .styled-select select {
     border: 0;
+    background: transparent;
     color: $yellow;
     height: 45px;
-    margin: 0 0 20px 0;
     padding: 10px 20px;
     width: 100%;
+    -webkit-appearance: none;
   }
   .radio-buttons {
     margin: 10px 0 30px 0;
