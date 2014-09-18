@@ -10,14 +10,9 @@
           <span class="ss-icon ss-standard">&#x2421;</span>
         </a>
         <ul>
-          <li>Home</li>
-          <li>Jobs</li>
-          <li>About Us</li>
-          <li>Candidates</li>
-          <li>Join Us</li>
-          <li>Clients</li>
-          <li>Blog</li>
-          <li>Contract</li>
+          <% MenuItem.order('position').each do |menu_item| %>
+            <li><%= link_to menu_item.name, menu_item.link.present? ? menu_item.link : page_path(menu_item.page.slug) %></li>
+          <% end %>
         </ul>
       </div>
     </a>

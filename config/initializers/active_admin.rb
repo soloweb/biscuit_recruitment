@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "C&C Search"
+  config.site_title = "Biscuit Recruitment"
 
   config.namespace :admin do |admin|
     admin.build_menu do |menu|

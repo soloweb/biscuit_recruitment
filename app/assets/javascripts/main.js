@@ -2,11 +2,11 @@
 
 $(document).ready(function () {
   $('.menu-toggle').click(function() {
-    $('.main-menu').fadeIn();
+    $('.main-menu').stop().fadeIn();
   });
 
   $('.main-menu .close').click(function() {
-    $('.main-menu').fadeOut();
+    $('.main-menu').stop().fadeOut();
   });
   console.log('Design & Developed By Soloweb. 2014');
 })

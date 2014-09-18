@@ -1,11 +1,11 @@
 {
-  "name": "C&C Search",
+  "name": "Biscuit Recruitment",
   "version": "1.0.0",
   "homepage": "TBD",
   "authors": [
-    "Willy Mena <willy@soloweb.com>"
+    "Jack Rehaag <willy@soloweb.com>"
   ],
-  "description": "C&C Search website",
+  "description": "Biscuit Recruitment website",
   "license": "Copyright",
   "private": true,
 
