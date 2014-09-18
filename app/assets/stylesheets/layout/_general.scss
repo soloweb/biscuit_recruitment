@@ -189,6 +189,8 @@ header .main-menu li a {
   box-sizing: border-box;
   font-size: 16px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
   .arrow {
     font-size: 20px;
     border: 2px solid $black;

@@ -26,49 +26,7 @@ meta :description => ""
 
   </div>
   <div class="col2 sidebar">
-    <div class="search">
-      <h3>Search</h3>
-      <form action="" class='vacancy_search'>
-        <label for="category">Job Category</label>
-        <div class="styled-select">
-          <select name="category" id="category">
-            <option value="">Construction</option>
-            <option value="">Education</option>
-          </select>
-        </div>
-        <label for="category">Vacancy Type</label>
-        <div class="radio-buttons">
-          <input type="radio" name="vacancy_type" value="Perm" >
-          Perm
-          <input type="radio" name="vacancy_type" value="Temp">
-          Temp
-          <input type="radio" name="vacancy_type" value="Contract">
-          Contract
-        </div>
-
-        <input type='submit' value="Search Jobs">
-      </form>
-    </div>
-    <h2>Latest Jobs</h2>
-    <div class="latest-jobs">
-      <% 4.times do %>
-        <div class="job">
-          <h4>Asset Manager</h4>
-
-          <h5>Duration</h5>
-          <p>Permanent</p>
-
-          <h5>Location</h5>
-          <p>London</p>
-
-          <h5>Salary</h5>
-          <p>£50000 - 55000</p>
-          <div class="arrow-btn">
-            More Info
-            <span class='ss-icon ss-gizmo arrow'>&#x27A1;</span>
-          </div>
-        </div>
-      <% end %>
-    </div>
+    <%= render 'shared/search_box' %>
+    <%= render 'shared/latest_jobs' %>
   </div>
 </div>

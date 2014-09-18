@@ -1,0 +1,21 @@
+<h2>Latest Jobs</h2>
+<div class="latest-jobs">
+  <% Vacancy.order('created_at').last(4).each do |vacancy| %>
+    <div class="job">
+      <h4><%= vacancy.title %></h4>
+
+      <h5>Duration</h5>
+      <p><%= vacancy.vacancy_type %></p>
+
+      <h5>Location</h5>
+      <p><%= vacancy.location %></p>
+
+      <h5>Salary</h5>
+      <p><%= vacancy.salary_information %></p>
+      <a href='<%= vacancy_path(vacancy) %>' class="arrow-btn">
+        More Info
+        <span class='ss-icon ss-gizmo arrow'>&#x27A1;</span>
+      </a>
+    </div>
+  <% end %>
+</div>

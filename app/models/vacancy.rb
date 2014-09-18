@@ -5,7 +5,7 @@ class Vacancy < ActiveRecord::Base
   has_many :vacancy_applications
 	validates_presence_of :title, :salary_information, :description, :location
 
-  VACANCY_TYPES = %w[Permanent Temporary Contract Part-time]
+  VACANCY_TYPES = %w[Permanent Temporary Contract]
   validates_inclusion_of :vacancy_type, in: VACANCY_TYPES
 
   geocoded_by :location
