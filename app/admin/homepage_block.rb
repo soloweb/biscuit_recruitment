@@ -16,14 +16,4 @@ ActiveAdmin.register HomepageBlock do
     column :updated_at
     actions
   end
-
-  form do |f|
-    f.inputs do
-      f.input :title
-      f.input :text
-      f.input :alignment, as: :select, collection: ALIGNMENT_OPTIONS, include_blank: false
-      f.input :image
-    end
-    f.actions
-  end
 end

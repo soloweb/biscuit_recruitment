@@ -92,10 +92,6 @@ header .main-menu li {
   font-size: 52px;
   color: $dark-grey;
   box-sizing: border-box;
-  &:hover {
-    background: $dark-grey;
-    a { color: $yellow; }
-  }
 }
 header .main-menu li a {
   color: $dark-grey;
@@ -123,6 +119,7 @@ header .main-menu li a {
   padding: 40px;
   box-sizing: border-box;
   background-size: cover !important;
+  overflow: hidden;
 }
 .homepage .block h3 {
   color: white;

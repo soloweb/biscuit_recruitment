@@ -1,3 +1,72 @@
 @media only screen and (min-width:320px) and (max-width: 767px){
+  .wrapper {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+  .header-image {
+    width: 100%;
+    height: 345px;
+  }
+  header .main-menu ul {
+    margin-top: 0;
+  }
+  header .main-menu ul li {
+    font-size: 32px;
+    height: 45px;
+  }
+  header .main-menu ul li a {
+    height: 100%;
+    padding: 0;
+  }
+  .homepage .col1 { @include gs-span(m, all); }
+  .homepage .col2 { @include gs-span(m, all); }
 
+  .homepage .block {
+    padding: 15px;
+    height: 280px;
+  }
+  .homepage .block p {
+    font-size: 18px;
+    @include gs-span(m, all);
+  }
+  .homepage .block h3 {
+    float: none;
+    text-align: center;
+    margin-top: 105px;
+  }
+  .homepage .block-double h3, p {
+    margin-top: 0;
+  }
+
+  .latest-jobs .job {
+    min-height: 325px;
+    height: inherit;
+  }
+
+  footer { @include gs-span(m, all); }
+  footer .col {
+    @include gs-span(m, all);
+    text-align: center;
+    margin-bottom: 20px;
+    &:last-child { @include gs-span(m, all); }
+  }
+  footer .col p {
+    @include gs-span(m, all);
+  }
+  footer .social li {
+    float: none;
+  }
+  footer .social li span {
+    float: none;
+  }
+  footer .col form input[type='text'] {
+    width: 70%;
+  }
+  footer .col form input[type='submit'] {
+    width: 20%;
+  }
+  footer .copyright {
+    text-align: center;
+    width: 100%;
+  }
 }

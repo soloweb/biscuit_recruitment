@@ -13,7 +13,7 @@ meta :description => ""
     </div>
 
     <% HomepageBlock.order('position').each do |homepage_block| %>
-      <div class="block <%= homepage_block.alignment_class %>" style="background: url('<%= homepage_block.image.url %>');">
+      <div class="block <%= homepage_block.alignment_class %> <%= "block-double" if homepage_block.title? && homepage_block.text? %>" style="background: url('<%= homepage_block.image.url %>');">
         <% if homepage_block.title? %>
           <h3><%= homepage_block.title %></h3>
         <% end %>
