@@ -32,5 +32,16 @@
 }
 
 @media only screen and (min-width:768px) and (max-width:1139px) and (orientation:portrait) {
-
+  .homepage .block {
+    height: 330px;
+  }
+  .homepage .block h3 {
+    margin-top: 105px;
+  }
+  .homepage .block p {
+    width: 100%;
+  }
+  .homepage .block-double h3 {
+    margin-top: 0;
+  }
 }

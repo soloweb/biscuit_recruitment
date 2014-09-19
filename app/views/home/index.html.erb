@@ -1,32 +1,34 @@
 <%
 meta :description => ""
 %>
-<div class="header-image">
+<div class="homepage">
+  <div class="header-image">
   
-</div>
-<div class="wrapper homepage">
-  <div class="col1">
-    <div class="title-block">
-      Biscuit Recruitment
-      London
-      the 'can do' agency partner
-    </div>
-
-    <% HomepageBlock.order('position').each do |homepage_block| %>
-      <div class="block <%= homepage_block.alignment_class %> <%= "block-double" if homepage_block.title? && homepage_block.text? %>" style="background: url('<%= homepage_block.image.url %>');">
-        <% if homepage_block.title? %>
-          <h3><%= homepage_block.title %></h3>
-        <% end %>
-
-        <% if homepage_block.text? %>
-          <p><%= homepage_block.text %></p>
-        <% end %>
-      </div>
-    <% end %>
-
   </div>
-  <div class="col2 sidebar">
-    <%= render 'shared/search_box' %>
-    <%= render 'shared/latest_jobs' %>
+  <div class="wrapper">
+    <div class="col1">
+      <div class="title-block">
+        Biscuit Recruitment
+        London
+        the 'can do' agency partner
+      </div>
+
+      <% HomepageBlock.order('position').each do |homepage_block| %>
+        <div class="block <%= homepage_block.alignment_class %> <%= "block-double" if homepage_block.title? && homepage_block.text? %>" style="background: url('<%= homepage_block.image.url %>');">
+          <% if homepage_block.title? %>
+            <h3><%= homepage_block.title %></h3>
+          <% end %>
+
+          <% if homepage_block.text? %>
+            <p><%= homepage_block.text %></p>
+          <% end %>
+        </div>
+      <% end %>
+
+    </div>
+    <div class="col2 sidebar">
+      <%= render 'shared/search_box' %>
+      <%= render 'shared/latest_jobs' %>
+    </div>
   </div>
 </div>

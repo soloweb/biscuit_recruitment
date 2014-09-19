@@ -52,6 +52,7 @@
   }
   footer .col p {
     @include gs-span(m, all);
+    margin-top: 16px;
   }
   footer .social li {
     float: none;

@@ -104,9 +104,17 @@ header .main-menu li a {
 .header-image {
   width: $header-image-width;
   margin: 0 auto;
-  height: 565px;
-  margin-bottom: -235px;
+  height: 430px;
   background: url('homepage-bg.png');
+}
+.homepage .header-image {
+  margin-bottom: -235px;
+  height: 565px;
+}
+.header-image .search-box {
+  @include gs-span(d, 8, 12);
+  @include gs-float(d, right);
+  margin: 20px 0 0 0;
 }
 .homepage .col1 { @include gs-span(d, 1, 7); }
 .homepage .col2 { @include gs-span(d, 8, 12); }
@@ -150,15 +158,59 @@ header .main-menu li a {
   box-sizing: border-box;
   margin: 0 0 20px 0;
 }
-.homepage .search {
+.page-title {
+  background: $black;
+  color: $yellow;
+  float: left;
+  font-size: 48px;
+  margin: 20px 0 0 0;
+  padding: 10px 75px;
+  text-transform: none;
+}
+.search-box {
   border: 8px solid $light-grey;
   background: $white;
   padding: 30px 20px;
 }
-.homepage .search h3 {
-  margin: 0 0 20px 0;
+.search-box h3 { margin: 0 0 20px 0; }
+.job-list {
+  @include gs-float(d, left);
 }
-.latest-jobs .job {
+.job-list .job { height: 300px; }
+.job-list .job h4 { float: left; }
+.job-list .job .job-desc {
+  float: left;
+  clear: left;
+}
+.job-list .job .social { 
+  float: right;
+  color: $grey-text;
+}
+.job-list .job .social div {
+  float: right;
+  margin: 0 0 0 10px;
+}
+.job-list .job .social a {
+  color: $dark-grey;
+  text-decoration: none;
+  margin: 0 5px 0 0;
+}
+.job-list .job .job-info {
+  height: 120px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  padding-top: 40px;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+.job-list .job .job-info .job-attr {
+  float: left;
+  margin-right: 60px;
+}
+.job-list .job .job-info .job-attr p { margin-top: 5px; }
+.job {
   background: $white;
   box-sizing: border-box;
   height: 325px;
@@ -166,12 +218,8 @@ header .main-menu li a {
   padding: 25px;
   position: relative;
 }
-.latest-jobs .job h4 {
-  margin: 0 0 10px 0;
-}
-.latest-jobs .job h5 {
-  margin: 20px 0 0 0;
-}
+.latest-jobs .job h4 { margin: 0 0 10px 0; }
+.latest-jobs .job h5 { margin: 20px 0 0 0; }
 .latest-jobs .job p {
   margin: 0;
   font-size: 18px;
@@ -201,7 +249,7 @@ header .main-menu li a {
     border-radius: 500px;
   }
 }
-.latest-jobs .job .arrow-btn {
+.job .arrow-btn {
   bottom: 0;
   position: absolute;
   right: 0;
@@ -241,6 +289,11 @@ form {
       margin-left: 0;
     }
   }
+  input[type='text'] {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+  }
   input[type='submit'] {
     background: $black;
     color: $white;
@@ -249,6 +302,9 @@ form {
     border: 0;
     text-transform: uppercase;
     font-weight: $light;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
   }
 }
 
