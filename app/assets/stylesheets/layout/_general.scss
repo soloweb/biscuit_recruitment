@@ -267,6 +267,14 @@ header .main-menu li a {
   position: absolute;
   right: 0;
 }
+.page-content {
+  @include gs-float(d, left);
+  @include gs-span(d, all);
+  background: $white;
+  box-sizing: border-box;
+  margin: 20px 0 0 0;
+  padding: 20px;
+}
 form {
   font-weight: $light;
   label {
