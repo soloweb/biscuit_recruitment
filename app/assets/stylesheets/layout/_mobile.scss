@@ -43,6 +43,10 @@
     margin-top: 0;
   }
 
+  .page-title {
+    padding: 10px 30px;
+  }
+
   .job-list .job {
     float: left;
     height: auto;
@@ -53,6 +57,15 @@
     float: left;
     left: 0;
     height: auto;
+  }
+  .job-page .job .social {
+    float: left;
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  .job-page .job .job-info .job-attr {
+    float: left;
+    clear: left;
   }
   .job-list .job .social {
     float: left;
