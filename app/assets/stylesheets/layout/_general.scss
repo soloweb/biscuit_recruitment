@@ -178,19 +178,19 @@ header .main-menu li a {
 }
 .job-list .job { height: 300px; }
 .job-list .job h4 { float: left; }
-.job-list .job .job-desc {
+.job .job-desc {
   float: left;
   clear: left;
 }
-.job-list .job .social { 
+.job .social { 
   float: right;
   color: $grey-text;
 }
-.job-list .job .social div {
+.job .social div {
   float: right;
   margin: 0 0 0 10px;
 }
-.job-list .job .social a {
+.job .social a {
   color: $dark-grey;
   text-decoration: none;
   margin: 0 5px 0 0;
@@ -205,11 +205,24 @@ header .main-menu li a {
   box-sizing: border-box;
   padding-top: 40px;
 }
-.job-list .job .job-info .job-attr {
+.job-info .job-attr {
   float: left;
   margin-right: 60px;
 }
-.job-list .job .job-info .job-attr p { margin-top: 5px; }
+.job .job-info .job-attr p { margin-top: 5px; }
+.job-page .job {
+  height: auto;
+  float: left;
+  @include gs-span(d, all);
+}
+.job-page .job h4 {
+  float: left;
+  text-transform: none;
+}
+.job-page .job .job-info {
+  float: left;
+  margin: 70px 0 0 0;
+}
 .job {
   background: $white;
   box-sizing: border-box;

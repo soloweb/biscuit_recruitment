@@ -2,3 +2,47 @@
 meta :title => @vacancy.title + " | Biscuit Recruitment",
      :description => sanitize(@vacancy.description[0,180])
 %>
+<div class="header-image">
+</div>
+
+<div class="wrapper job-page">
+  <h1 class="page-title"><%= @vacancy.title %></h1>
+  <div class="job">
+    <h4>Vacancy Description:</h4>
+    <div class="social">
+      share job:
+      <div class="ss-icon ss-social-regular">
+        <a href="#">&#x2709;</a>
+        <a href="#">&#xF612;</a>
+        <a href="#">&#xF611;</a>
+        <a href="#">&#xF610;</a>
+      </div>
+    </div>
+
+    <div class="job-desc">
+      <%= sanitize @vacancy.description %>
+    </div>
+
+    <div class="job-info">
+      <div class="job-attr">
+        <h5>Duration</h5>
+        <p><%= @vacancy.vacancy_type %></p>
+      </div>
+
+      <div class="job-attr">
+        <h5>Location</h5>
+        <p><%= @vacancy.location %></p>
+      </div>
+
+      <div class="job-attr">
+        <h5>Salary</h5>
+        <p><%= @vacancy.salary_information %></p>
+      </div>
+    </div>
+
+    <a href='<%= vacancy_path(@vacancy) %>' class="arrow-btn">
+      Apply
+      <span class='ss-icon ss-gizmo arrow'>&#x270E;</span>
+    </a>
+  </div>
+</div>
