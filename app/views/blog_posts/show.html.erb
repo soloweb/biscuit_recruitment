@@ -1,0 +1,17 @@
+<%
+meta :title => @blog_post.title + " | Biscuit Recruitment",
+     :description => @blog_post.meta_description,
+     :keywords => @blog_post.meta_keywords
+%>
+
+<div class="wrapper">
+  <div class="blog-post">
+    <h1 class="page-title"><%= @blog_post.title %></h1>
+    <div class="header-image" <%= ("style=background:" + "url('" + @blog_post.header_image.url + "')" + ';background-size:cover;' ) if @blog_post.header_image.exists? %>>
+</div>
+    <div class="blog-post-content">
+      <%= raw(@blog_post.content) %>
+    </div>
+  </div>
+  <%= render 'shared/sidebar' %>
+</div>

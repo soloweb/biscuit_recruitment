@@ -10,5 +10,7 @@ BiscuitRecruitment::Application.routes.draw do
   resources :newsletter_subscribers, only: [:create]
   get 'contact-us', to: 'enquiries#new', as: :enquiries
   post 'contact-us', to: 'enquiries#create'
+  get '/blog', to: 'blog_posts#index'
+  get '/blog/*id', to: 'blog_posts#show', as: :blog_post
   get '*id', to: 'pages#show', as: :page
 end

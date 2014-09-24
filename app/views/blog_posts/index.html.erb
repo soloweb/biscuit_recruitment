@@ -1,0 +1,8 @@
+<div class="blog-posts">
+  <div class="blog-post">
+    <% @blog_posts.each do |blog_post| %>
+      <%= blog_post.title %>
+    <% end %>
+    <%= paginate @blog_posts %>
+  </div>
+</div>
