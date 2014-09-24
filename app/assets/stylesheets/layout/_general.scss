@@ -1,3 +1,10 @@
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -295px;
+}
 body {
   font-family: $font2;
   background: $medium-grey;
@@ -185,14 +192,31 @@ header .main-menu li a {
   text-align: center;
   text-transform: none;
 }
-.page {
+.page, .blog-post {
   @include gs-span(d, 1, 7);
 }
-.page .header-image {
-  @include gs-span(d, all);
-  margin-top: 20px;
-  margin-bottom: -20px;
-  height: 330px;
+.page, .blog-post {
+  .header-image {
+    @include gs-span(d, all);
+    margin-top: 20px;
+    margin-bottom: -20px;
+    height: 330px;
+  }
+}
+.blog-post .header-image {
+  position: relative;
+}
+.blog-post .header-image span {
+  position: absolute;
+  bottom: 20px;
+  color: $white;
+  font-weight: $light;
+}
+.blog-post .header-image .author {
+  left: 20px;
+}
+.blog-post .header-image .date {
+  right: 20px;
 }
 .sidebar {
   @include gs-span(d, 8, 12);
@@ -308,7 +332,32 @@ header .main-menu li a {
   position: absolute;
   right: 0;
 }
-.page-content {
+.recent-posts {
+  @include gs-span(d, all);
+  margin-top: 237px;
+}
+.recent-posts .recent-post {
+  @include gs-span(d, all);
+  background: $white;
+  box-sizing: border-box;
+  height: 72px;
+  margin-top: 1px;
+  padding: 20px;
+}
+.recent-posts .recent-post h4 {
+  float: left;
+}
+.recent-posts .recent-post .arrow-btn {
+  float: right;
+  height: 72px;
+  margin: -20px;
+  padding: 5px;
+  width: 72px;
+}
+.recent-posts .recent-post .arrow-btn span {
+  margin-left: 10px;
+}
+.page-content, .blog-post-content {
   @include gs-float(d, left);
   @include gs-span(d, all);
   background: $white;
@@ -464,7 +513,6 @@ form {
   color: $black;
   text-decoration: none;
 }
-
 footer {
   @include gs-span(d, all);
   background: $black;
@@ -472,6 +520,8 @@ footer {
   margin: 50px 0 0 0;
   padding: 40px 0 30px 0;
   font-weight: $light;
+  height: 295px;
+  box-sizing: border-box;
 }
 footer .col {
   @include gs-span(d, 1, 3);

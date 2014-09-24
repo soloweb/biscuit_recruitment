@@ -5,6 +5,10 @@ ActiveAdmin.register BlogPost do
     @blog_post = BlogPost.find_by_slug!(params[:id])
   end
 
+  before_save do |blog_post|
+    blog_post.author_id = current_admin_user.id
+  end
+
   form do |f|
     f.inputs do
       f.input :title, :type => :string

@@ -8,10 +8,12 @@ meta :title => @blog_post.title + " | Biscuit Recruitment",
   <div class="blog-post">
     <h1 class="page-title"><%= @blog_post.title %></h1>
     <div class="header-image" <%= ("style=background:" + "url('" + @blog_post.header_image.url + "')" + ';background-size:cover;' ) if @blog_post.header_image.exists? %>>
-</div>
+      <span class="author"><%= @blog_post.author.full_name %></span>
+      <span class="date">Date Posted: <%= @blog_post.created_at.strftime("%d/%m/%Y") %></span>
+    </div>
     <div class="blog-post-content">
       <%= raw(@blog_post.content) %>
     </div>
   </div>
-  <%= render 'shared/sidebar' %>
+  <%= render 'shared/recent_posts' %>
 </div>

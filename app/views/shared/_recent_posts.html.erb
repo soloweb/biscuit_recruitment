@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <ul class="recent-posts">
+    <% BlogPost.limit(5).each do |blog_post| %>
+      <li class="recent-post">
+        <h4><%= blog_post.title %></h4>
+        <%= link_to blog_post_path(blog_post), class: 'arrow-btn' do %>
+          <span class="ss-icon ss-gizmo arrow">➡</span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
