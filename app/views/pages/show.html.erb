@@ -3,7 +3,7 @@ meta :title => @page.title + " | Biscuit Recruitment",
      :description => @page.meta_description,
      :keywords => @page.meta_keywords
 %>
-<div class="header-image">
+<div class="header-image" <%= ("style=background:" + "url('" + @page.header_image.url + "')" ) if @page.header_image.exists? %>>
 </div>
 
 <div class="wrapper">

@@ -1,0 +1,37 @@
+<div class="header-image">
+</div>
+<div class="wrapper contact-page">
+  <h1 class="page-title">Contact</h1>
+  <div class="page-content">
+    <%= form_for @enquiry do |f| %>
+      <%= f.text_field :name, placeholder: 'Full Name *' %>
+      <%= f.text_field :email, placeholder: 'Email *' %>
+      <%= f.text_field :telephone, placeholder: 'Telephone' %>
+      <%= f.text_area :message, placeholder: 'Message *' %>
+      <%= f.submit 'Send' %>
+    <% end %>
+  </div>
+  <div class="contact-info">
+    <h3>biscuit recruitment</h3>
+    
+    <h4>Address</h4>
+    <p>
+      123 Avenue Road, <br />
+      London<br />
+      Po57 0de
+    </p>
+
+    <h4>Contact</h4>
+    <ul class="contact">
+      <li><span class="ss-icon ss-gizmo">&#x1F4DE;</span>0234 567 899</li>
+      <li><span class="ss-icon ss-gizmo">&#x2709;</span>info@biscuitrecruitment.com</li>
+    </ul>
+
+    <h4>Connect</h4>
+    <ul class="social ss-icon ss-social-regular">
+      <li><a href="#">&#xF611;</a></li>
+      <li><a href="#">&#xF610;</a></li>
+      <li><a href="#">&#xF612;</a></li>
+    </ul>
+  </div>
+</div>

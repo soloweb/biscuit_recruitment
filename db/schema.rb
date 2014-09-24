@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919113319) do
+ActiveRecord::Schema.define(version: 20140919153724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20140919113319) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "telephone"
   end
 
   create_table "friendly_id_slugs", force: true do |t|
@@ -124,6 +125,10 @@ ActiveRecord::Schema.define(version: 20140919113319) do
     t.string   "slug"
     t.string   "meta_keywords"
     t.string   "meta_description"
+    t.string   "header_image_file_name"
+    t.string   "header_image_content_type"
+    t.integer  "header_image_file_size"
+    t.datetime "header_image_updated_at"
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree

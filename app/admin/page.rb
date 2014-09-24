@@ -1,5 +1,5 @@
 ActiveAdmin.register Page do
-  permit_params :title, :content, :meta_keywords, :meta_description
+  permit_params :title, :content, :meta_keywords, :meta_description, :header_image
 
 	before_filter :only => [:show, :edit, :update, :destroy] do
 		@page = Page.find_by_slug!(params[:id])
@@ -11,6 +11,7 @@ ActiveAdmin.register Page do
       f.input :content,  :type => :text, as: :ckeditor
       f.input :meta_description, :type => :string
       f.input :meta_keywords, :type => :string
+      f.input :header_image
     end
     f.actions
   end
