@@ -8,9 +8,8 @@ meta :description => ""
   <div class="wrapper">
     <div class="col1">
       <div class="title-block">
-        Biscuit Recruitment
-        London
-        the 'can do' agency partner
+        <%= image_tag 'biscuit-recruitment-logo.jpg', class: 'logo' %>
+        <p class="caption">the 'can do' agency partner</p>
       </div>
 
       <% HomepageBlock.order('position').each do |homepage_block| %>
@@ -26,9 +25,6 @@ meta :description => ""
       <% end %>
 
     </div>
-    <div class="col2 sidebar">
-      <%= render 'shared/search_box' %>
-      <%= render 'shared/latest_jobs' %>
-    </div>
+    <%= render 'shared/sidebar' %>
   </div>
 </div>

@@ -1,55 +1,51 @@
-<div class="header-image">
-  <div class="wrapper">
-    <%= render 'shared/search_box' %>
-  </div>
-</div>
 <div class="wrapper">
-  <h1 class="page-title">jobs</h1>
-  <% if @vacancies.count > 0 %>
     <div class="job-list">
-      <% @vacancies.each do |vacancy| %>
-        <div class="job">
-          <h4><%= vacancy.title %></h4>
-          <div class="social">
-            share job:
-            <div class="ss-icon ss-social-regular">
-            <a href="mailto:?subject=I wanted you to see this vacancy at Biscuit Recruitment&amp;body=Job Vacancy: <%= vacancy_url(vacancy) %>">&#x2709;</a>
-            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%= vacancy_url(vacancy) %>&amp;title=<%= URI.encode(vacancy.title) %>&amp;summary=<%= (vacancy.description[0, 100]) %>&amp;source=<%= request.protocol + request.host %>">&#xF612;</a>
-            <a href="https://twitter.com/share?url=<%= vacancy_url(vacancy) %>">&#xF611;</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= vacancy_url(vacancy) %>&amp;t=<%= vacancy.title %>">&#xF610;</a>
+      <h1 class="page-title">jobs</h1>
+      <% if @vacancies.count > 0 %>
+        <% @vacancies.each do |vacancy| %>
+          <div class="job">
+            <h4><%= vacancy.title %></h4>
+            <div class="social">
+              share job:
+              <div class="ss-icon ss-social-regular">
+              <a href="mailto:?subject=I wanted you to see this vacancy at Biscuit Recruitment&amp;body=Job Vacancy: <%= vacancy_url(vacancy) %>">&#x2709;</a>
+              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%= vacancy_url(vacancy) %>&amp;title=<%= URI.encode(vacancy.title) %>&amp;summary=<%= (vacancy.description[0, 100]) %>&amp;source=<%= request.protocol + request.host %>">&#xF612;</a>
+              <a href="https://twitter.com/share?url=<%= vacancy_url(vacancy) %>">&#xF611;</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=<%= vacancy_url(vacancy) %>&amp;t=<%= vacancy.title %>">&#xF610;</a>
+              </div>
             </div>
+
+            <div class="job-desc">
+              <%= sanitize vacancy.description[0, 200] %>
+              <%= '...' if sanitize(vacancy.description).size > 200 %>
+            </div>
+
+            <div class="job-info">
+              <div class="job-attr">
+                <h5>Duration</h5>
+                <p><%= vacancy.vacancy_type %></p>
+              </div>
+
+              <div class="job-attr">
+                <h5>Location</h5>
+                <p><%= vacancy.location %></p>
+              </div>
+
+              <div class="job-attr">
+                <h5>Salary</h5>
+                <p><%= vacancy.salary_information %></p>
+              </div>
+            </div>
+
+            <a href='<%= vacancy_path(vacancy) %>' class="arrow-btn">
+              More Info
+              <span class='ss-icon ss-gizmo arrow'>&#x27A1;</span>
+            </a>
           </div>
-
-          <div class="job-desc">
-            <%= sanitize vacancy.description[0, 200] %>
-            <%= '...' if sanitize(vacancy.description).size > 200 %>
-          </div>
-
-          <div class="job-info">
-            <div class="job-attr">
-              <h5>Duration</h5>
-              <p><%= vacancy.vacancy_type %></p>
-            </div>
-
-            <div class="job-attr">
-              <h5>Location</h5>
-              <p><%= vacancy.location %></p>
-            </div>
-
-            <div class="job-attr">
-              <h5>Salary</h5>
-              <p><%= vacancy.salary_information %></p>
-            </div>
-          </div>
-
-          <a href='<%= vacancy_path(vacancy) %>' class="arrow-btn">
-            More Info
-            <span class='ss-icon ss-gizmo arrow'>&#x27A1;</span>
-          </a>
-        </div>
+        <% end %>
+      <% else %>
+        <p>No vacancies found.</p>
       <% end %>
     </div>
-  <% else %>
-    <p>No vacancies found.</p>
-  <% end %>
+  <%= render 'shared/sidebar' %>
 </div>

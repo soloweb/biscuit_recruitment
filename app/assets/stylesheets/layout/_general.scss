@@ -34,6 +34,9 @@ header {
   background: $black;
   color: $white;
 }
+header .logo {
+  margin: 15px 0;
+}
 header .menu-toggle {
   float: right;
   margin-top: 50px;
@@ -158,14 +161,45 @@ header .main-menu li a {
   box-sizing: border-box;
   margin: 0 0 20px 0;
 }
+.homepage .title-block .logo {
+  width: 435px;
+  margin: 0 10px;
+}
+.homepage .title-block .caption {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  font-weight: $light;
+}
+.homepage .sidebar {
+  margin-top: 0;
+}
 .page-title {
   background: $black;
   color: $yellow;
   float: left;
   font-size: 48px;
   margin: 20px 0 0 0;
-  padding: 10px 75px;
+  padding: 75px 0;
+  @include gs-span(d, all);
+  text-align: center;
   text-transform: none;
+}
+.page {
+  @include gs-span(d, 1, 7);
+}
+.page .header-image {
+  @include gs-span(d, all);
+  margin-top: 20px;
+  margin-bottom: -20px;
+  height: 330px;
+}
+.sidebar {
+  @include gs-span(d, 8, 12);
+  margin-top: 20px
+}
+.sidebar h2 {
+  margin: 40px 0;
 }
 .search-box {
   border: 8px solid $light-grey;
@@ -174,9 +208,13 @@ header .main-menu li a {
 }
 .search-box h3 { margin: 0 0 20px 0; }
 .job-list {
+  @include gs-span(d, 1, 7);
+}
+.job-list .job {
+  height: 300px;
+  @include gs-span(d, all);
   @include gs-float(d, left);
 }
-.job-list .job { height: 300px; }
 .job-list .job h4 { float: left; }
 .job .job-desc {
   float: left;
@@ -210,6 +248,9 @@ header .main-menu li a {
   margin-right: 60px;
 }
 .job .job-info .job-attr p { margin-top: 5px; }
+.job-page {
+  @include gs-span(d, 1, 7);
+}
 .job-page .job {
   height: auto;
   float: left;
@@ -317,6 +358,11 @@ form {
     margin: 10px 0 30px 0;
     float: left;
     clear: left;
+    width: 100%;
+  }
+  .radio-buttons .radio-option {
+    float: left;
+    width: 25%;
   }
   input[type='radio'] {
     margin-left: 90px;
