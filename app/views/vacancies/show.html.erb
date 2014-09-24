@@ -12,11 +12,12 @@ meta :title => @vacancy.title + " | Biscuit Recruitment",
     <div class="social">
       share job:
       <div class="ss-icon ss-social-regular">
-        <a href="#">&#x2709;</a>
-        <a href="#">&#xF612;</a>
-        <a href="#">&#xF611;</a>
-        <a href="#">&#xF610;</a>
+          <a href="mailto:?subject=I wanted you to see this vacancy at Biscuit Recruitment&amp;body=Job Vacancy: <%= vacancy_url(@vacancy) %>">&#x2709;</a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%= vacancy_url(@vacancy) %>&amp;title=<%= URI.encode(@vacancy.title) %>&amp;summary=<%= (@vacancy.description[0, 100]) %>&amp;source=<%= request.protocol + request.host %>">&#xF612;</a>
+            <a href="https://twitter.com/share?url=<%= vacancy_url(@vacancy) %>">&#xF611;</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= vacancy_url(@vacancy) %>&amp;t=<%= @vacancy.title %>">&#xF610;</a>
       </div>
+
     </div>
 
     <div class="job-desc">
