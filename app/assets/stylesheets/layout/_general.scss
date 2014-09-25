@@ -414,7 +414,7 @@ form {
     float: left;
     clear: left;
     width: 100%;
-    background: url('expand.png') no-repeat $dark-grey 97% center;
+    background: image-url('expand.png') no-repeat $dark-grey 97% center;
   }
   .styled-select select {
     border: 0;
