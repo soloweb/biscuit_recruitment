@@ -392,6 +392,11 @@ header .main-menu li a {
 .page-content p {
   margin-bottom: 30px;
 }
+
+.vacancy-application-wrapper .page-content {
+  @include gs-float(d, left);
+  @include gs-span(d, 1, 7);
+}
 form {
   font-weight: $light;
   label {
@@ -526,6 +531,30 @@ form {
   color: $black;
   text-decoration: none;
 }
+
+.new_vacancy_application input[type='text'] {
+  border: 1px solid $light-grey;
+  box-sizing: border-box;
+  height: 45px;
+  margin: 10px 0 0 0;
+  padding: 10px 20px;
+}
+.new_vacancy_application label {
+  margin: 10px 0 0 0;
+}
+.new_vacancy_application {
+  input[type='file'], select, label {
+    float: left;
+    clear: left;
+  }
+}
+.new_vacancy_application input[type='file'] {
+  margin: 10px 0;
+}
+.new_vacancy_application input[type='submit'] {
+  margin: 10px 0 0 0;
+}
+
 footer {
   @include gs-span(d, all);
   background: $black;

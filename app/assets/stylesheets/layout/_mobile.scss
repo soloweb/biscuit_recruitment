@@ -147,6 +147,14 @@
     height: inherit;
   }
 
+  .vacancy-application-wrapper .page-content {
+    @include gs-span(m, all);
+  }
+
+  .vacancy-application-wrapper .sidebar {
+    display: none;
+  }
+
   footer {
     @include gs-span(m, all);
     height: auto;

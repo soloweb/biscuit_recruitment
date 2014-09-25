@@ -1,0 +1,29 @@
+<%
+meta :title => "Apply for " + @vacancy.title + " | Biscuit Recruitment",
+     :description => "Apply for " + @vacancy.title + " | Biscuit Recruitment"
+%>
+
+<div class="wrapper vacancy-application-wrapper">
+  <div class="page-content">
+    <h2>Apply for the role of <%= @vacancy.title %></h2>
+    <%= form_for @vacancy_application do |f| %>
+      <%= f.hidden_field :vacancy_id, value: @vacancy.id %>
+      
+      <%= f.label :title %>
+      <%= f.select :title, ['Ms', 'Miss', 'Mrs', 'Mr', 'Dr', 'Prof'] %>
+      
+      <%= f.text_field 'applicant_first_name', placeholder: 'First Name' %>
+      <%= f.text_field 'applicant_last_name', placeholder: 'Last Name' %>
+      <%= f.text_field 'applicant_email', placeholder: 'Email' %>
+      
+      <%= f.label 'cv', 'CV' %>
+      <%= f.file_field 'cv' %>
+      
+      <%= f.label 'cover_letter', 'Cover Letter' %>
+      <%= f.file_field 'cover_letter' %>
+      
+      <%= f.submit 'Apply' %>
+    <% end %>
+  </div>
+  <%= render 'shared/sidebar' %>
+</div>

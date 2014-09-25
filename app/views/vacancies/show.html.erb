@@ -40,7 +40,7 @@ meta :title => @vacancy.title + " | Biscuit Recruitment",
         </div>
       </div>
 
-      <a href='<%= vacancy_path(@vacancy) %>' class="arrow-btn">
+      <a href='<%= new_vacancy_application_path(vacancy: @vacancy) %>' class="arrow-btn">
         Apply
         <span class='ss-icon ss-gizmo arrow'>&#x270E;</span>
       </a>

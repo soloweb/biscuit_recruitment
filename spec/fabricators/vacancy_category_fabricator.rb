@@ -1,3 +1,3 @@
 Fabricator(:vacancy_category) do
-  name 'Recruitment'
+  name 'Test Category'
 end

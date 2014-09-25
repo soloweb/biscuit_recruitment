@@ -19,3 +19,7 @@ end
 Given(/^I click the Apply Now link$/) do
   find("a.apply").click
 end
+
+Given(/^I visit the vacancy show page$/) do
+  visit vacancy_path(@vacancy)
+end
