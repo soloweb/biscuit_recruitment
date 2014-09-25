@@ -12,6 +12,10 @@
     box-sizing: border-box;
     padding: 15px;
   }
+  header .logo {
+    height: 55px;
+    margin: 28px 0;
+  }
   header .main-menu ul {
     margin-top: 0;
   }
@@ -25,7 +29,14 @@
   }
   .homepage .col1 { @include gs-span(m, all); }
   .homepage .col2 { @include gs-span(m, all); }
-
+  .homepage .title-block {
+    padding: 20px;
+    margin-top: -230px;
+    margin-bottom: 380px;
+  }
+  .homepage .title-block .logo {
+    width: 100%;
+  }
   .homepage .block {
     padding: 15px;
     height: 280px;
@@ -43,10 +54,68 @@
     margin-top: 0;
   }
 
-  .page-title {
-    padding: 10px 30px;
+  .homepage .sidebar {
+    width: 100%;
+    margin: 0;
+  }
+  .sidebar h2 {
+    display: none;
+  }
+  .sidebar .latest-jobs {
+    display: none;
   }
 
+  .page-title {
+    padding: 10px 30px;
+    box-sizing: border-box;
+  }
+
+  .page-wrapper {
+    .sidebar {
+      display: none;
+    }
+  }
+
+  .page {
+    @include gs-span(m, all);
+  }
+  
+  .contact-page .page-content {
+    @include gs-span(m, all);
+    @include gs-float(m, left);
+  }
+  .contact-page .contact-info {
+    @include gs-span(m, all);
+    @include gs-float(m, left);
+  }
+  .contact-page form input[type='submit'] {
+    width: 100%;
+  }
+
+  .job-wrapper .sidebar {
+    display: none;
+  }
+  .job-page {
+    @include gs-span(m, all);
+    // @include gs-float(m, left);
+  }
+  
+  .job-list-wrapper {
+    .sidebar {
+      @include gs-span(m, all);
+      @include gs-float(m, left);
+      margin-top: 140px;
+      .search-box {
+        padding: 20px;
+      }
+    }
+  }
+  .job-list {
+    @include gs-span(m, all);
+  }
+  .job-list .page-title {
+    margin-bottom: 380px;
+  }
   .job-list .job {
     float: left;
     height: auto;
@@ -78,7 +147,10 @@
     height: inherit;
   }
 
-  footer { @include gs-span(m, all); }
+  footer {
+    @include gs-span(m, all);
+    height: auto;
+  }
   footer .col {
     @include gs-span(m, all);
     text-align: center;

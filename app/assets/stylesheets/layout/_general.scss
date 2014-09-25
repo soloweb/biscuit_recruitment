@@ -218,6 +218,7 @@ header .main-menu li a {
 .blog-post .header-image .date {
   right: 20px;
 }
+
 .sidebar {
   @include gs-span(d, 8, 12);
   margin-top: 20px
@@ -356,6 +357,18 @@ header .main-menu li a {
 }
 .recent-posts .recent-post .arrow-btn span {
   margin-left: 10px;
+}
+.blog-posts {
+  @include gs-span(d, 1, 7);
+}
+.blog-posts .blog-post {
+  @include gs-span(d, all);
+  @include gs-float(d, left);
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 200px;
+  background: $white;
 }
 .page-content, .blog-post-content {
   @include gs-float(d, left);
