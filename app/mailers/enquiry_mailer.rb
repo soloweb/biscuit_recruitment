@@ -1,5 +1,5 @@
 class EnquiryMailer < ActionMailer::Base
-  default from: 'enquiries@candcsearch.co.uk'
+  default from: 'enquiries@biscuitrecruitment.co.uk'
 
   def notification_email(enquiry)
     @enquiry = enquiry

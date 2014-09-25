@@ -29,10 +29,10 @@ BiscuitRecruitment::Application.configure do
     address: "smtp.mandrillapp.com",
     port: 587, 
     user_name: 'jack@soloweb.com', 
-    password: 'qpnnxqRl9GgqGf1ou5MyPA',
+    password: 'eOfJde-KdNPo4IgPSL7vag',
     enable_starttls_auto: true,
     authentication: 'login',
-    domain: 'candcsearch.co.uk', 
+    domain: 'biscuitrecruitment.co.uk', 
   }
 
   # Debug mode disables concatenation and preprocessing of assets.

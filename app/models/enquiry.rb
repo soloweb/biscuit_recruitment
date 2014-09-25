@@ -3,7 +3,7 @@ class Enquiry < ActiveRecord::Base
   after_save :send_notification
 
   if Rails.env.production?
-    NOTIFY_EMAIL = 'info@candcsearch.co.uk'
+    NOTIFY_EMAIL = 'info@biscuitrecruitment.co.uk'
   else
     NOTIFY_EMAIL = 'jack@soloweb.com'
   end

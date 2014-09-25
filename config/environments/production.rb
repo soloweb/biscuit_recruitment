@@ -4,17 +4,17 @@ BiscuitRecruitment::Application.configure do
 
   # Activeadmin
   # Should be set to to actual host in production
-  config.action_mailer.default_url_options = { host: 'candcsearch.co.uk' }
+  config.action_mailer.default_url_options = { host: 'biscuitrecruitment.co.uk' }
   config.action_mailer.perform_deliveries = true 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.mandrillapp.com",
     port: 587, 
     user_name: 'jack@soloweb.com', 
-    password: 'qpnnxqRl9GgqGf1ou5MyPA',
+    password: 'eOfJde-KdNPo4IgPSL7vag',
     enable_starttls_auto: true,
     authentication: 'login',
-    domain: 'candcsearch.co.uk', 
+    domain: 'biscuitrecruitment.co.uk', 
   }
 
   # Code is not reloaded between requests.
