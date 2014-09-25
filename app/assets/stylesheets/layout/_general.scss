@@ -115,10 +115,10 @@ header .main-menu li a {
   width: $header-image-width;
   margin: 0 auto;
   height: 430px;
-  background: url('homepage-bg.png');
+  background: image-url('homepage-bg.png');
 }
 .contact-header-image {
-  background: url('contact-banner.jpg');
+  background: image-url('contact-banner.jpg');
   height: 330px;
 }
 .homepage .header-image {
