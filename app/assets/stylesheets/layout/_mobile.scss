@@ -68,6 +68,7 @@
   .page-title {
     padding: 10px 30px;
     box-sizing: border-box;
+    font-size: 38px;
   }
 
   .page-wrapper {
@@ -97,7 +98,6 @@
   }
   .job-page {
     @include gs-span(m, all);
-    // @include gs-float(m, left);
   }
   
   .job-list-wrapper {
