@@ -609,6 +609,8 @@ footer .new_newsletter_subscriber {
     background: none;
     padding: 10px;
     float: left;
+    height: 45px;
+    box-sizing: border-box;
     text-transform: uppercase;
     width: 210px;
     color: $grey-text;
@@ -619,7 +621,7 @@ footer .new_newsletter_subscriber {
     border-left: 0;
     float: left;
     width: 45px;
-    height: 44px;
+    height: 45px;
     padding: 10px 0;
   }
 }
