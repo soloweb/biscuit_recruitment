@@ -1,4 +1,7 @@
 @media only screen and (min-width:768px) and (max-width:1139px) {
+  body {
+    height: auto;
+  }
   h4 {
     font-size: 22px;
   }
@@ -32,9 +35,6 @@
 }
 
 @media only screen and (min-width:768px) and (max-width:1139px) and (orientation:portrait) {
-  .page-wrap {
-    margin-bottom: 150px;
-  }
   .homepage .block {
     height: 330px;
   }

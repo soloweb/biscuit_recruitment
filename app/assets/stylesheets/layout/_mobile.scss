@@ -81,6 +81,9 @@
     @include gs-span(m, all);
   }
   
+  .contact-header-image {
+    height: 205px;
+  }
   .contact-page .page-content {
     @include gs-span(m, all);
     @include gs-float(m, left);
