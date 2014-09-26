@@ -234,7 +234,10 @@ header .main-menu li a {
   background: $white;
   padding: 30px 20px;
 }
-.search-box h3 { margin: 0 0 20px 0; }
+.search-box h3 {
+  margin: 0 0 20px 0;
+  font-weight: $regular;
+}
 .job-list {
   @include gs-span(d, 1, 7);
 }
@@ -243,7 +246,10 @@ header .main-menu li a {
   @include gs-span(d, all);
   @include gs-float(d, left);
 }
-.job-list .job h4 { float: left; }
+.job-list .job h4 {
+  float: left;
+  font-weight: $regular;
+}
 .job .job-desc {
   float: left;
   clear: left;
@@ -279,6 +285,9 @@ header .main-menu li a {
   }
 }
 .job .job-info .job-attr p { margin-top: 5px; }
+.job .job-info .job-attr h5 {
+  font-weight: $regular;
+}
 .job-page {
   @include gs-span(d, 1, 7);
 }
@@ -290,6 +299,7 @@ header .main-menu li a {
 .job-page .job h4 {
   float: left;
   text-transform: none;
+  font-weight: $regular;
 }
 .job-page .job .job-info {
   float: left;
@@ -303,8 +313,14 @@ header .main-menu li a {
   padding: 25px;
   position: relative;
 }
-.latest-jobs .job h4 { margin: 0 0 10px 0; }
-.latest-jobs .job h5 { margin: 20px 0 0 0; }
+.latest-jobs .job h4 {
+  margin: 0 0 10px 0;
+  font-weight: $regular;
+}
+.latest-jobs .job h5 {
+  margin: 20px 0 0 0;
+  font-weight: $regular;
+}
 .latest-jobs .job p {
   margin: 0;
   font-size: 18px;
