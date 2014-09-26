@@ -1,4 +1,7 @@
 @media only screen and (min-width:768px) and (max-width:1139px) {
+  body {
+    height: auto;
+  }
   h4 {
     font-size: 22px;
   }
@@ -59,8 +62,22 @@
     height: auto;
   }
 
+  .contact-page .contact-info {
+    height: 445px;
+  }
+  .contact-page .page-content {
+    height: 445px;
+  }
+
   form .radio-buttons .radio-option {
     width: 50%;
     margin: 0 0 10px   0;
+  }
+
+  footer .col:last-child {
+    width: 32%;
+  }
+  footer .copyright {
+    margin: 30px 0 0 0;
   }
 }
