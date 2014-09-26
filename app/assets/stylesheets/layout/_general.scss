@@ -275,6 +275,9 @@ header .main-menu li a {
 .job-info .job-attr {
   float: left;
   margin-right: 60px;
+  &:last-child {
+    width: 35%;
+  }
 }
 .job .job-info .job-attr p { margin-top: 5px; }
 .job-page {
