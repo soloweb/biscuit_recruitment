@@ -163,10 +163,9 @@ header .main-menu li a {
 }
 .homepage .title-block {
   @include gs-span(d, all);
-  background: $black;
+  background: rgba(42, 42, 42, 0.6);
   color: $yellow;
   height: 213px;
-  opacity: 0.6;
   padding: 40px 100px;
   box-sizing: border-box;
   margin: 0 0 20px 0;
