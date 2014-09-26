@@ -36,6 +36,7 @@
   }
   .homepage .title-block .logo {
     width: 100%;
+    margin: 0;
   }
   .homepage .block {
     padding: 15px;
@@ -76,8 +77,17 @@
       display: none;
     }
   }
-
   .page {
+    @include gs-span(m, all);
+  }
+
+  .blog-posts-wrapper .sidebar {
+    display: none;
+  }
+  .blog-posts {
+    @include gs-span(m, all);
+  }
+  .blog-post {
     @include gs-span(m, all);
   }
   

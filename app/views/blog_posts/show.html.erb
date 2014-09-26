@@ -4,7 +4,7 @@ meta :title => @blog_post.title + " | Biscuit Recruitment",
      :keywords => @blog_post.meta_keywords
 %>
 
-<div class="wrapper">
+<div class="wrapper blog-posts-wrapper">
   <div class="blog-post">
     <h1 class="page-title"><%= @blog_post.title %></h1>
     <div class="header-image" <%= ("style=background:" + "url('" + @blog_post.header_image.url + "')" + ';background-size:cover;' ) if @blog_post.header_image.exists? %>>
