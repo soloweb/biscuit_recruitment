@@ -44,4 +44,23 @@
   .homepage .block-double h3 {
     margin-top: 0;
   }
+
+  .latest-jobs .job p {
+    width: 55%;
+  }
+
+  .job-list .job {
+    height: 340px;
+  }
+  .job-list .job .social {
+    margin: 10px 0 0 0;
+  }
+  .job-list .job .job-info {
+    height: auto;
+  }
+
+  form .radio-buttons .radio-option {
+    width: 50%;
+    margin: 0 0 10px   0;
+  }
 }
