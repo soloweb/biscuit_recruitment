@@ -32,8 +32,10 @@
         <![endif]-->
 
         <div class="page-wrap">
-          <%= render 'shared/header' %>
-          <%= yield %>
+          <div class="page-main">
+            <%= render 'shared/header' %>
+            <%= yield %>
+          </div>
         </div>
         <%= render 'shared/footer' %>
 

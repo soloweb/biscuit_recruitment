@@ -3,7 +3,10 @@ html, body {
 }
 .page-wrap {
   min-height: 100%;
-  margin-bottom: -295px;
+}
+.page-main {
+  overflow:auto;
+  padding-bottom: 335px;
 }
 body {
   font-family: $font2;
@@ -392,6 +395,10 @@ header .main-menu li a {
   height: 200px;
   background: $white;
 }
+.blog-posts .blog-post h3 a {
+  color: inherit;
+  text-decoration: none;
+}
 .page-content, .blog-post-content {
   @include gs-float(d, left);
   @include gs-span(d, all);
@@ -578,14 +585,16 @@ form {
 }
 
 footer {
-  @include gs-span(d, all);
+  width: 100%;
   background: $black;
   color: $grey-text;
-  margin: 50px 0 0 0;
   padding: 40px 0 30px 0;
   font-weight: $light;
   height: 295px;
   box-sizing: border-box;
+  position: relative;
+  margin-top: -295px; /* negative value of footer height */
+  clear:both;
 }
 footer .col {
   @include gs-span(d, 1, 3);
