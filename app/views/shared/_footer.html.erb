@@ -1,33 +1,32 @@
 <footer>
   <div class="wrapper">
-  <div class="cols">
-    <div class="col">
-      <h3>Contact</h3>
-      <ul class="contact">
-        <li><span class="ss-icon ss-gizmo">&#x1F4DE;</span>0234 567 899</li>
-        <li><span class="ss-icon ss-gizmo">&#x2709;</span>info@biscuitrecruitment.com</li>
-      </ul>
-    </div>
+    <div class="cols">
+      <div class="col">
+        <h3>Contact</h3>
+        <ul class="contact">
+          <li><span class="ss-icon ss-gizmo">&#x1F4DE;</span>0234 567 899</li>
+          <li><span class="ss-icon ss-gizmo">&#x2709;</span>info@biscuitrecruitment.com</li>
+        </ul>
+        <div class="copyright">copyright © biscuit recruitment. All rights reserved</div>
+      </div>
 
-    <div class="col">
-      <h3>Connect</h3>
-      <ul class="social">
-        <li><span class="ss-icon ss-social-regular">&#xF611;</span>Twitter</li>
-        <li><span class="ss-icon ss-social-regular">&#xF612;</span>Linkedin</li>
-      </ul>
-    </div>
+      <div class="col">
+        <h3>Connect</h3>
+        <ul class="social">
+          <li><span class="ss-icon ss-social-regular">&#xF611;</span>Twitter</li>
+          <li><span class="ss-icon ss-social-regular">&#xF612;</span>Linkedin</li>
+        </ul>
+      </div>
 
-    <div class="col">
-      <h3>Newsletter</h3>
-      <p>Get the latest job and company
-  updates straight to your inbox</p>
-      <%= form_for NewsletterSubscriber.new do |f| %>
-        <%= f.text_field :email, placeholder: 'Email Address' %>
-        <%= f.submit 'send', class: 'ss-icon ss-standard' %>
-      <% end %>
+      <div class="col">
+        <h3>Newsletter</h3>
+        <p>Get the latest job and company
+    updates straight to your inbox</p>
+        <%= form_for NewsletterSubscriber.new do |f| %>
+          <%= f.text_field :email, placeholder: 'Email Address' %>
+          <%= f.submit 'send', class: 'ss-icon ss-standard' %>
+        <% end %>
+      </div>
     </div>
-  </div>
-    <div class="copyright">copyright © biscuit recruitment. All rights reserved</div>
-    <%= image_tag 'soloweb-logo-white-small.png', class: 'soloweb-logo' %>
   </div>
 </footer>
