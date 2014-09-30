@@ -144,6 +144,19 @@ header .main-menu li a {
   box-sizing: border-box;
   background-size: cover !important;
   overflow: hidden;
+  position: relative;
+  &:hover {
+    ::before {
+      background: rgba(0, 0, 0, 0.2);
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    // opacity: 0.70;
+  }
 }
 .homepage .block h3 {
   color: white;
@@ -340,6 +353,13 @@ header .main-menu li a {
   text-transform: uppercase;
   text-decoration: none;
   color: $black;
+  &:hover {
+    background: $dark-grey;
+    color: $white;
+    .arrow {
+      border-color: $white;
+    }
+  }
   .arrow {
     font-size: 20px;
     border: 2px solid $black;
@@ -490,6 +510,9 @@ form {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
+    &:hover {
+      color: $dark-grey;
+    }
   }
 }
 .contact-page form input[type='text'] {
