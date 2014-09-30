@@ -1,5 +1,5 @@
 <%
-meta :description => ""
+  meta :description => "Biscuit Recruitment specialises in support staff recruitment for a diverse range of businesses from to small start-ups to global companies. With an exceptional delivery record and robust recruitment process, Biscuit aims to complete every assignment successfully with care, dedication and passion."
 %>
 <div class="homepage">
   <div class="header-image">
@@ -13,6 +13,11 @@ meta :description => ""
       </div>
 
       <% HomepageBlock.order('position').each do |homepage_block| %>
+        <% if homepage_block.link? %>
+          <a href="<%= homepage_block.link %>">
+        <% elsif homepage_block.page_id? %>
+          <a href="<%= page_path(homepage_block.page) %>">
+        <% end %>
         <div class="block <%= homepage_block.alignment_class %> <%= "block-double" if homepage_block.title? && homepage_block.text? %>" style="background: url('<%= homepage_block.image.url %>');">
           <% if homepage_block.title? %>
             <h3><%= homepage_block.title %></h3>
@@ -22,6 +27,9 @@ meta :description => ""
             <p><%= homepage_block.text %></p>
           <% end %>
         </div>
+        <% if homepage_block.link? || homepage_block.page_id? %>
+          </a>
+        <% end %>
       <% end %>
 
     </div>

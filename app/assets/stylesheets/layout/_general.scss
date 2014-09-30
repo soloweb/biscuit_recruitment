@@ -166,6 +166,7 @@ header .main-menu li a {
   float: left;
   @include gs-span(d, 1, 8);
   font-size: 22px;
+  color: $black;
 }
 .homepage .block-align-right h3 {
   float: right;

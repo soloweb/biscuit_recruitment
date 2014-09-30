@@ -1,5 +1,5 @@
 ActiveAdmin.register HomepageBlock do
-  permit_params :title, :text, :position, :alignment, :image
+  permit_params :title, :text, :position, :alignment, :image, :link, :page_id
 
   config.sort_order = 'position_asc'
   config.paginate   = false
@@ -10,6 +10,8 @@ ActiveAdmin.register HomepageBlock do
     sortable_handle_column
     column :id
     column :title
+    column :link
+    column :page
     column :text
     column :position
     column :created_at
