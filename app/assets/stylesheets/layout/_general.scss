@@ -145,31 +145,59 @@ header .main-menu li a {
   background-size: cover !important;
   overflow: hidden;
   position: relative;
+  z-index: 0;
   &:hover {
     ::before {
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.25);
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: -1;
+      border: 5px solid $yellow;
     }
-    // opacity: 0.70;
+    p {
+      color: $white;
+    }
+    .more-info {
+      opacity: 1;
+    }
   }
+}
+.homepage .block .more-info {
+  color: $yellow;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+}
+.homepage .block .more-info span {
+  margin: 1px 0 0 10px;
+  float: right;
 }
 .homepage .block h3 {
   color: white;
   margin-top: 140px;
+  z-index: 100;
 }
 .homepage .block p {
   float: left;
   @include gs-span(d, 1, 8);
   font-size: 22px;
   color: $black;
+  z-index: 100;
 }
 .homepage .block-align-right h3 {
   float: right;
+}
+.homepage .text-block .more-info {
+  float: left;
+  clear: left;
+}
+.homepage .block-align-right .more-info {
+  float: right;
+  clear: right;
 }
 .homepage .block-align-left h3 {
   float: left;
@@ -177,6 +205,10 @@ header .main-menu li a {
 .homepage .block-align-left p {
   float: right;
   margin-right: 0;
+}
+.homepage .block-align-left .more-info {
+  float: left;
+  clear: left;
 }
 .homepage .title-block {
   @include gs-span(d, all);
@@ -355,11 +387,7 @@ header .main-menu li a {
   text-decoration: none;
   color: $black;
   &:hover {
-    background: $dark-grey;
-    color: $white;
-    .arrow {
-      border-color: $white;
-    }
+    background: $yellow;
   }
   .arrow {
     font-size: 20px;
@@ -512,7 +540,8 @@ form {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     &:hover {
-      color: $dark-grey;
+      background: $yellow;
+      color: $black;
     }
   }
 }
@@ -637,9 +666,18 @@ footer .col {
 footer .col h3{
   color: $white;
 }
+footer .contact li {
+  float: left;
+  clear: left;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 footer .contact span {
   color: $yellow;
-  margin: 0 15px 0 0;
+  margin: 0px 15px 0 0;
+  float: left;
   font-size: 18px;
 }
 footer .social li {

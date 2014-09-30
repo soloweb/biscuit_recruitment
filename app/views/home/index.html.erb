@@ -18,13 +18,23 @@
         <% elsif homepage_block.page_id? %>
           <a href="<%= page_path(homepage_block.page) %>">
         <% end %>
-        <div class="block <%= homepage_block.alignment_class %> <%= "block-double" if homepage_block.title? && homepage_block.text? %>" style="background: url('<%= homepage_block.image.url %>');">
+        <div class="block <%= homepage_block.alignment_class %> <%= "block-double" if homepage_block.title? && homepage_block.text? %> <%= "text-block" if homepage_block.title? == false && homepage_block.text? %>" style="background: url('<%= homepage_block.image.url %>');">
           <% if homepage_block.title? %>
             <h3><%= homepage_block.title %></h3>
           <% end %>
 
           <% if homepage_block.text? %>
             <p><%= homepage_block.text %></p>
+          <% end %>
+
+          <% if homepage_block.link? %>
+            <a href="<%= homepage_block.link %>" class='more-info'>
+              More info <span class="ss-icon ss-gizmo">&#x27A1;</span>
+            </a>
+          <% elsif homepage_block.page_id? %>
+            <a href="<%= page_path(homepage_block.page) %>" class='more-info'>
+              More info <span class="ss-icon ss-gizmo">&#x27A1;</span>
+            </a>
           <% end %>
         </div>
         <% if homepage_block.link? || homepage_block.page_id? %>
